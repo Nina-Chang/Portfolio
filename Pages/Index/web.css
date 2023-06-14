@@ -1,0 +1,165 @@
+/* web.html */
+body,
+html {
+    height: 100%;
+}
+
+.webBackGround {
+    background-image: url("../../img/pagetop.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    height: 100%;
+}
+
+.webBackGround span {
+    font-family: 'Dancing Script', cursive;
+}
+.word a{
+    font-size: 3rem;
+    font-family: 'Caveat', cursive;
+}
+
+/* Next Page animation Start */
+.word a:before,
+.word a:after {
+    -webkit-transition: all 0.35s ease;
+    transition: all 0.35s ease;
+    height: 5px;
+    width: 35%;
+    background-color: #528cb3;
+    position: absolute;
+    content: '';
+    opacity: 0;
+}
+
+.word a:before {
+    top: 0;
+    left: 0;
+}
+
+.word a:after {
+    bottom: 0;
+    right: 0;
+}
+
+.word a:hover:before,
+.word a:hover:after {
+    opacity: 1;
+}
+
+.word a:hover:before {
+    left: 65%;
+}
+
+.word a:hover:after{
+    right: 65%;
+}
+/* Next Page animation End */
+
+@media (max-width:576px){
+    /* web.html */
+    .webBackGround span{
+        margin-left:10%;
+        font-size: 6rem;
+    }
+    .webBackGround img {
+        display: none;
+    }
+    .rope img{
+        width: 100%;
+        position: absolute;
+        top:28%;
+        left: 0%;
+    }
+    .note img{
+        position: absolute; 
+        top:25%;
+        left: 5%;
+        width: 80%;
+    }
+    .word a{
+        position: absolute; 
+        top:36%;
+        left: 15%;
+    }
+}
+@media (min-width:576px){
+    /* web.html */
+    .webBackGround span {
+        margin-left:10%;
+        font-size: 9rem;
+    }
+    .webBackGround img {
+        display: none;
+    }
+    .rope img{
+        width: 100%;
+        position: absolute;
+        top:28%;
+        left: 0%;
+    }
+    .note img{
+        position: absolute; 
+        top:25%;
+        left: 20%;
+        width: 64%;
+    }
+    .word a{
+        position: absolute; 
+        top:40%;
+        left: 32%;
+    }
+}
+@media (min-width:769px){
+    /* web.html */
+    .webBackGround span {
+        margin-left:10%;
+        font-size: 10rem;
+    }
+    .webBackGround .pen{
+        width: 10%;
+        display: inline;
+        transform: translateY(-70%);
+    }
+    .rope img{
+        width: 100%;
+        position: absolute;
+        top:22%;
+    }
+    .note img{
+        position: absolute; 
+        top:25%;
+        left: 50%;
+        width: 48%;
+    }
+    .word a{
+        position: absolute; 
+        top:40%;
+        left: 60%;
+    }
+}
+@media (min-width:1024px){
+    /* web.html */
+    .webBackGround span {
+        font-size: 13rem;
+    }
+    .webBackGround img {
+        width: 300px;
+    }
+    .rope img{
+        position: absolute;
+        top:25%;
+    }
+    .note img{
+        position: absolute; 
+        top:28%;
+        left: 60%;
+        width: 400px;
+    }
+    .word a{
+        position: absolute; 
+        top:40%;
+        left: 67%;
+    }
+}

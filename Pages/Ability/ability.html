@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../../css/bootstrap.min.css" />
+    <!-- <link rel="stylesheet" href="js/fullpage.min.css" /> -->
+    <!-- 加上上面這行才會有fullpage的navigation(右邊黑色圓點) -->
+    <link rel="stylesheet" href="ability.css" />
+    <link
+      rel="stylesheet"
+      href="https://www.littlesnippets.net/css/codepen-result.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Dancing+Script:wght@700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+      <!-- 背景+標頭+開關 -->
+      <div class="container-fluid abiBackGround">
+        <div class="row">
+          <div class="col">
+            <span>Ability</span>
+            <img
+              src="../../img/The_Paint_Collection-removebg-preview.png"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+
+      <!-- Card -->
+      <div id="card-group" class="container">
+        <div
+          class="row row-col-sm-3 row-cols-md-4 row-cols-lg-5 row-cols-xxl-6 g-4"
+        >
+          <div class="col" >
+            <div class="card-1" id="cardhoveranimate">
+              <img src="../../img/html.png" style="background-color: white;" class="card-img-top pt-2 pb-2" alt="..." />
+              <figcaption>
+                <h5 class="card-title">HTML</h5>
+              </figcaption>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card-2" id="cardhoveranimate2">
+              <img src="../../img/css.jpg" style="background-color: white;" class="card-img-top pt-3 pb-3" alt="..." />
+              <figcaption>
+                <h5 class="card-title">CSS</h5>
+              </figcaption>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card-3" id="cardhoveranimate3">
+              <img src="../../img/jquery.jpg" class="card-img-top" alt="..." />
+              <figcaption>
+                <h5 class="card-title">JQUERY</h5>
+              </figcaption>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card-4" id="cardhoveranimate4">
+              <img src="../../img/bootstrap.png" style="background-color:white;border-radius: 4px;" class="card-img-top" alt="..." />
+              <figcaption>
+                <h5 class="card-title">Bootstrap</h5>
+              </figcaption>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card-5" id="cardhoveranimate5">
+              <img src="../../img/Javascript.png" style="background-color:white;border-radius: 4px;" class="card-img-top" alt="..." />
+              <figcaption>
+                <h5 class="card-title">JavaScript</h5>
+              </figcaption>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card-6" id="cardhoveranimate6">
+              <img src="../../img/React-js.png" style="background-color:white;border-radius: 4px;" class="card-img-top pt-4 pb-4" alt="..." />
+              <figcaption>
+                <h5 class="card-title">React.js</h5>
+              </figcaption>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card-8" id="cardhoveranimate8">
+              <img src="../../img/C++++.jpg" class="card-img-top" alt="..." />
+              <figcaption>
+                <h5 class="card-title">C#</h5>
+              </figcaption>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card-9" id="cardhoveranimate9">
+              <img src="../../img/microsoft-sql-server-logo.svg" style="background-color:white;border-radius: 4px;" class="card-img-top" alt="..." />
+              <figcaption>
+                <h5 class="card-title">SQL</h5>
+              </figcaption>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 左邊的標籤 -->
+      <div class="list">
+        <div>
+          <a
+          class="no1"
+          href="../Ability/ability.html"
+          >
+            <img src="../../img/multi-skilled.png" alt="">
+          </a
+          >
+        </div>
+        <div>
+          <a
+          class="no2"
+          href="../Portfolio/portfolio.html"
+          >
+          <img src="../../img/portfolio.png" alt="">
+          </a
+          >
+        </div>
+        <div>
+          <a
+          class="no3"
+          href="../Contactme/contactme.html"
+          >
+          <img src="../../img/contact.png" alt="">
+          </a
+          >
+        </div>
+      </div>
+      
+
+    <script src="../../js/bootstrap.bundle.min.js"></script>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>
+
+      $(document).ready(function(){
+        var index=$(location).attr('href').lastIndexOf('/');
+        var hf=$(location).attr('href').substring(index+1);
+        if(hf=="ability.html"){
+          // 左邊的標籤active
+          $(".no1 img").addClass("noclick");
+          $(".list div:nth-of-type(1)").addClass("listclick");
+        }
+        
+        // 左邊的標籤hover
+        $(".no2 img").mouseenter(function(){
+          $(".no2 img").addClass("nohover");
+        })
+        $(".no2 img").mouseout(function(){
+          $(".no2 img").removeClass("nohover");
+        })
+        $(".no3 img").mouseenter(function(){
+          $(".no3 img").addClass("nohover");
+        })
+        $(".no3 img").mouseout(function(){
+          $(".no3 img").removeClass("nohover");
+        })
+        // 左邊的標籤hover
+      })
+      
+    </script>
+  </body>
+</html>

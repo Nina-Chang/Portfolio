@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../../css/bootstrap.min.css" />
+    <link rel="stylesheet" href="contactme.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Dancing+Script:wght@700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <!-- 背景+標頭 -->
+    <div class="container-fluid conBackGround">
+      <div class="row">
+        <div class="col">
+          <span>Contact Me</span>
+          <img
+            src="../../img/The_Paint_Collection-removebg-preview.png"
+            width="300"
+            alt=""
+          />
+        </div>
+      </div>
+    </div>
+
+    <!-- Plane -->
+    <div class="planesticker" id="plane">
+      <img
+        src="../../img/The_Paper_Plane_Sticker.png"
+        width="150"
+        alt=""
+      />
+    </div>
+
+    <!-- Card -->
+    <div
+      class="Card"
+      data-tilt
+      data-tilt-max="50"
+      data-tilt-speed="400"
+      data-tilt-perspective="500"
+    >
+      <div class="container" id="card-content">
+        <div
+          class="concard mb-3 shadow-lg p-3 mb-5 bg-body rounded"
+        >
+          <div class="row">
+            <div class="col-md-4">
+              <img
+                src="../../img/character.png"
+                width="200"
+                class="img-fluid rounded-start"
+                alt="..."
+              />
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h3 class="card-title">張舜雅</h3>
+                <p class="card-text">Email:
+                    <span class="card-text">nina2000827@gmail.com</span>
+                </p>
+                <p class="card-text">Github:
+                    <span class="card-text">https://github.com/Nina-Chang</span>
+                </p>
+                <p class="card-text">
+                  <small class="text-muted">Copyright © 2023 張舜雅</small>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+
+    <!-- 左邊的標籤 -->
+    <div class="list">
+      <div>
+        <a
+        class="no1"
+        href="../Ability/ability.html"
+        >
+          <img src="../../img/multi-skilled.png" alt="">
+        </a
+        >
+      </div>
+      <div>
+        <a
+        class="no2"
+        href="../Portfolio/portfolio.html"
+        >
+        <img src="../../img/portfolio.png" alt="">
+        </a
+        >
+      </div>
+      <div>
+        <a
+        class="no3"
+        href="../Contactme/contactme.html"
+        >
+        <img src="../../img/contact.png" alt="">
+        </a
+        >
+      </div>
+    </div>
+
+    <script src="../../js/bootstrap.bundle.min.js"></script>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>
+      $(document).ready(function(){
+        var index=$(location).attr('href').lastIndexOf('/');
+        var hf=$(location).attr('href').substring(index+1);
+        if(hf=="contactme.html"){
+          // 左邊的標籤active
+          $(".no3 img").addClass("noclick");
+          $(".list div:nth-of-type(3)").addClass("listclick");
+        }
+        
+        // 左邊的標籤hover
+        $(".no1 img").mouseenter(function(){
+          $(".no1 img").addClass("nohover");
+        })
+        $(".no1 img").mouseout(function(){
+          $(".no1 img").removeClass("nohover");
+        })
+        $(".no2 img").mouseenter(function(){
+          $(".no2 img").addClass("nohover");
+        })
+        $(".no2 img").mouseout(function(){
+          $(".no2 img").removeClass("nohover");
+        })
+        // 左邊的標籤hover
+      })
+
+        function init(){
+          $('#plane').css({
+              'top':'-100px',
+              'left':document.body.clientWidth/2-150
+          })
+        }
+        init();
+
+        //plane動畫
+        t=0;
+        if(window.matchMedia('(max-width:576px)').matches){
+          function getX(){
+            var x=Math.pow(1-t,2)*document.body.clientWidth/2-100+2*t*(1-t)*document.body.clientWidth+Math.pow(t,2)*200;
+            return x;
+          }
+          function getY(){
+            var y=Math.pow(1-t,2)*0+2*t*(1-t)*30+Math.pow(t,2)*200;
+            return y;
+          }
+          var move=function(){
+            $("#plane").animate({left:(getX())+"px",top:(getY())+"px"},100,function(){
+              t+=0.08;
+              move();
+              if(getY()>100){
+                  $('#plane').css({
+                      'transform': 'rotate(200deg)'
+                  });
+              }
+              if(getY()>153){
+                  $('#plane').stop();
+              }
+            })
+          }
+          move();
+        }
+        else if(window.matchMedia('(max-width:769px)').matches){
+          function getX(){
+            var x=Math.pow(1-t,2)*document.body.clientWidth/2-100+2*t*(1-t)*document.body.clientWidth+50+Math.pow(t,2)*270;
+            return x;
+          }
+          function getY(){
+            var y=Math.pow(1-t,2)*0+2*t*(1-t)*50+Math.pow(t,2)*200;
+            return y;
+          }
+          var move=function(){
+            $("#plane").animate({left:(getX())+"px",top:(getY())+"px"},100,function(){
+              t+=0.08;
+              move();
+              if(getY()>100){
+                  $('#plane').css({
+                      'transform': 'rotate(200deg)'
+                  });
+              }
+              if(getY()>185){
+                  $('#plane').stop();
+              }
+            })
+          }
+          move();
+        }
+        else if(window.matchMedia('(max-width:996px)').matches){
+          function getX(){
+            var x=Math.pow(1-t,2)*document.body.clientWidth/2-100+2*t*(1-t)*document.body.clientWidth+50+Math.pow(t,2)*360;
+            return x;
+          }
+          function getY(){
+            var y=Math.pow(1-t,2)*0+2*t*(1-t)*50+Math.pow(t,2)*200;
+            return y;
+          }
+          var move=function(){
+            $("#plane").animate({left:(getX())+"px",top:(getY())+"px"},100,function(){
+              t+=0.08;
+              move();
+              if(getY()>100){
+                  $('#plane').css({
+                      'transform': 'rotate(200deg)'
+                  });
+              }
+              if(getY()>185){
+                  $('#plane').stop();
+              }
+            })
+          }
+          move();
+        }
+        else if(window.matchMedia('(max-width:1200px)').matches){
+          function getX(){
+            var x=Math.pow(1-t,2)*document.body.clientWidth/2-100+2*t*(1-t)*document.body.clientWidth+50+Math.pow(t,2)*450;
+            return x;
+          }
+          function getY(){
+            var y=Math.pow(1-t,2)*0+2*t*(1-t)*50+Math.pow(t,2)*200;
+            return y;
+          }
+          var move=function(){
+            $("#plane").animate({left:(getX())+"px",top:(getY())+"px"},100,function(){
+              t+=0.08;
+              move();
+              if(getY()>100){
+                  $('#plane').css({
+                      'transform': 'rotate(200deg)'
+                  });
+              }
+              if(getY()>185){
+                  $('#plane').stop();
+              }
+            })
+          }
+          move();
+        }
+        else if(window.matchMedia('(min-width:1200px)').matches){
+          function getX(){
+            var x=Math.pow(1-t,2)*document.body.clientWidth/2-100+2*t*(1-t)*document.body.clientWidth+50+Math.pow(t,2)*550;
+            return x;
+          }
+          function getY(){
+            var y=Math.pow(1-t,2)*0+2*t*(1-t)*30+Math.pow(t,2)*200;
+            return y;
+          }
+          var move=function(){
+            $("#plane").animate({left:(getX())+"px",top:(getY())+"px"},100,function(){
+              t+=0.08;
+              move();
+              if(getY()>100){
+                  $('#plane').css({
+                      'transform': 'rotate(200deg)'
+                  });
+              }
+              if(getY()>185){
+                  $('#plane').stop();
+              }
+            })
+          }
+          move();
+        }
+        //plane動畫
+
+    </script>
+  </body>
+</html>

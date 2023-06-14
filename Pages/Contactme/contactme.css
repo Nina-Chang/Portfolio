@@ -1,0 +1,147 @@
+/* contactme */
+body,
+html {
+    height: 100%;
+}
+
+.conBackGround {
+    background-image: url("../../img/pagetop.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    height: 100%;
+}
+.conBackGround span {
+    font-size: 8rem;
+    font-family: 'Caveat', cursive;
+}
+
+.list div{
+    background-color: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(50px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+    border-right: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 8px;
+    overflow: hidden;
+    position: fixed;
+}
+.list div:nth-of-type(1){
+    top: 30%;
+    left: -6px;
+    
+}
+.list div:nth-of-type(2){
+    top:44%;
+    left: -6px;
+}
+.list div:nth-of-type(3){
+    top: 58%;
+    left: -6px;
+}
+.list div:not(:last-child){
+    margin-bottom: 1px;
+}
+.no1 img{
+    width: 70px;
+    padding: 10px 10px;
+}
+.no2 img{
+    width: 70px;
+    padding: 10px 10px;
+}
+.no3 img{
+    width: 70px;
+    padding: 10px 10px;
+}
+
+.listclick{
+    width: 85px;
+    text-align: right;
+    background-color:#C5D9C1;
+}
+.noclick{
+    background-color:#C5D9C1;
+}
+.nohover{
+    opacity: 0.5;
+}
+
+#plane{
+    position: absolute;
+    transform: rotate(30deg);
+    background-color: transparent;
+}
+
+
+@media (max-width:576px){
+    .conBackGround span {
+        position: absolute;
+        top: 6%;
+        left: 10%;
+        font-size: 4rem;
+    }
+    .conBackGround img {
+        margin-top: 20px;
+        margin-left: 12%;
+        width: 300px;
+    }
+    .concard{
+        width: 70%;
+        position: absolute; 
+        top: 30%; 
+        left: 17%;
+    }
+    .concard img{
+        width: 100px;
+    }
+}
+@media (min-width:576px){
+    .conBackGround span {
+        position: absolute;
+        top: 5%;
+        left: 10%;
+        font-size: 6rem;
+    }
+    .conBackGround img {
+        margin-top: 20px;
+        margin-left: 15%;
+        width: 380px;
+    }
+    .concard{
+        max-width: 800px;
+        width: 70%; 
+        position: absolute; 
+        top: 35%; 
+        left: 15%;
+    }
+    .concard img{
+        width: 100px;
+    }
+    .card-title{
+        font-size: 30px;
+    }
+    .card-body{
+        font-size: 20px;
+    }
+}
+@media (min-width:769px){
+    .concard{
+        position: absolute; 
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .concard img{
+        width: 160px;
+    }
+    .card-title{
+        font-size: 34px;
+    }
+    .card-body{
+        font-size: 24px;
+    }
+}
+@media (min-width:1024px){
+    .conBackGround img {
+        margin-left: 12%;
+    }
+}

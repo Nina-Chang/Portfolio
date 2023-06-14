@@ -1,0 +1,479 @@
+/* ability.html */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+body,
+html {
+    height: 100%;
+}
+
+.abiBackGround {
+    background-image: url("../../img/pagetop.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    height: 100%;
+}
+
+.abiBackGround span {
+    font-size: 8rem;
+    font-family: 'Caveat', cursive;
+}
+
+.carousel-item h5,p{
+    color: steelblue;
+    font-weight: bold;
+}
+
+.list div{
+    background-color: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(50px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+    border-right: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 8px;
+    overflow: hidden;
+    position: fixed;
+}
+.list div:nth-of-type(1){
+    top: 30%;
+    left: -6px;
+    
+}
+.list div:nth-of-type(2){
+    top:44%;
+    left: -6px;
+}
+.list div:nth-of-type(3){
+    top: 58%;
+    left: -6px;
+}
+.list div:not(:last-child){
+    margin-bottom: 1px;
+}
+.no1 img{
+    width: 70px;
+    padding: 10px 10px;
+}
+.no2 img{
+    width: 70px;
+    padding: 10px 10px;
+}
+.no3 img{
+    width: 70px;
+    padding: 10px 10px;
+}
+
+.listclick{
+    width: 85px;
+    text-align: right;
+    background-color:#C5D9C1;
+}
+.noclick{
+    background-color:#C5D9C1;
+}
+.nohover{
+    opacity: 0.5;
+}
+
+.card-title {
+    font-size: 2rem;
+    font-family: 'Caveat', cursive;
+}
+
+
+/* all */
+.offcanvas-body{
+    font-size: 24px;
+    font-family: 'Caveat', cursive;
+}
+.d-flex{
+    font-size:24px;
+    font-family: 'Caveat', cursive;
+}
+
+
+
+@media (max-width:576px){
+    /* ability.html */
+    .abiBackGround span {
+        position: absolute;
+        top: 6%;
+        left: 10%;
+        font-size: 4rem;
+    }
+    .abiBackGround img {
+        margin-top: 35px;
+        margin-left: 12%;
+        width: 200px;
+    }
+    /* card */
+    #card-group{
+        position: absolute; 
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    /* 1 */
+    #cardhoveranimate{
+        width: 60%;
+        text-align: right;
+        margin: 0px auto 0px auto;
+    }
+    #cardhoveranimate img{
+        width: 100px;
+    }
+    /* 1 */
+    /* 2 */
+    #cardhoveranimate2{
+        width: 60%;
+        text-align: right;
+        margin: 0px auto 0px auto;
+    }
+    #cardhoveranimate2 img{
+        width: 100px;
+    }
+    /* 2 */
+    /* 3 */
+    #cardhoveranimate3{
+        width: 60%;
+        text-align: right;
+        margin: 0px auto 0px auto;
+    }
+    #cardhoveranimate3 img{
+        width: 100px;
+    }
+    /* 3 */
+    /* 4 */
+    #cardhoveranimate4{
+        width: 60%;
+        text-align: right;
+        margin: 0px auto 0px auto;
+    }
+    #cardhoveranimate4 img{
+        width: 100px;
+
+    }
+    /* 4 */
+    /* 5 */
+    #cardhoveranimate5{
+        width: 60%;
+        text-align: right;
+        margin: 0px auto 0px auto;
+    }
+    #cardhoveranimate5 img{
+        width: 100px;
+
+    }
+    /* 5 */
+    /* 6 */
+    #cardhoveranimate6{
+        width: 60%;
+        text-align: right;
+        margin: 0px auto 0px auto;
+    }
+    #cardhoveranimate6 img{
+        width: 100px;
+    }
+    /* 6 */
+    /* 7 */
+    #cardhoveranimate7{
+        width: 60%;
+        text-align: right;
+        margin: 0px auto 0px auto;
+    }
+    #cardhoveranimate7 img{
+        width: 100px;
+
+    }
+    /* 7 */
+    /* 8 */
+    #cardhoveranimate8{
+        width: 60%;
+        text-align: right;
+        margin: 0px auto 0px auto;
+    }
+    #cardhoveranimate8 img{
+        width: 100px;
+        
+    }
+    /* 8 */
+    /* 9 */
+    #cardhoveranimate9{
+        width: 60%;
+        text-align: center;
+        margin: 0px auto 0px auto;
+    }
+    #cardhoveranimate9 img{
+        width: 100px;
+    }
+    /* 9 */
+    .card-title{
+        display: none;
+    }
+    /* card */
+
+    /* notepaper */
+    .notepaper1 img{
+        position: absolute; 
+        top:22%;
+        left: 8%;
+    }
+    .notepaper2 img{
+        position: absolute; 
+        top:22%;
+        left:35%;
+    }
+    .notepaper3 img{
+        position: absolute; 
+        top:22%;
+        left: 60%;
+    }
+    /* notepaper */
+    /* tape */
+    .tape1 img{
+        position: absolute; 
+        top:15%;
+        left: 15%;
+    }
+    .tape2 img{
+        position: absolute; 
+        top:15%;
+        left: 40%;
+    }
+    .tape3 img{
+        position: absolute; 
+        top:15%;
+        left: 65%;
+    }
+    /* tape */
+}
+@media (max-width:371px){
+    /* card */
+    #card-group{
+        position: absolute; 
+        top: 57%;
+    }
+    /* card */
+}
+@media (min-width:576px){
+    /* ability.html */
+    .abiBackGround span {
+        position: absolute;
+        top: 5%;
+        left: 10%;
+        font-size: 6rem;
+    }
+    .abiBackGround img {
+        margin-top: 26px;
+        margin-left: 15%;
+        width: 300px;
+    }
+    /* card */
+    #card-group{
+        position: absolute; 
+        top: 60%;
+        transform: translateY(-50%);
+    }
+    /* 1 */
+    #cardhoveranimate{
+        width: 60%;
+        text-align: right;
+        margin: 0px auto 0px auto;
+    }
+    #cardhoveranimate img{
+        width: 100px;
+    }
+    /* 1 */
+    /* 2 */
+    #cardhoveranimate2{
+        width: 60%;
+        text-align: right;
+        margin: 0px auto 0px auto;
+    }
+    #cardhoveranimate2 img{
+        width: 100px;
+    }
+    /* 2 */
+    /* 3 */
+    #cardhoveranimate3{
+        width: 60%;
+        text-align: right;
+        margin: 0px auto 0px auto;
+    }
+    #cardhoveranimate3 img{
+        width: 100px;
+    }
+    /* 3 */
+    /* 4 */
+    #cardhoveranimate4{
+        width: 60%;
+        text-align: right;
+        margin: 0px auto 0px auto;
+    }
+    #cardhoveranimate4 img{
+        width: 100px;
+
+    }
+    /* 4 */
+    /* 5 */
+    #cardhoveranimate5{
+        width: 60%;
+        text-align: right;
+        margin: 0px auto 0px auto;
+    }
+    #cardhoveranimate5 img{
+        width: 100px;
+
+    }
+    /* 5 */
+    /* 6 */
+    #cardhoveranimate6{
+        width: 60%;
+        text-align: right;
+        margin: 0px auto 0px auto;
+    }
+    #cardhoveranimate6 img{
+        width: 100px;
+    }
+    /* 6 */
+    /* 7 */
+    #cardhoveranimate7{
+        width: 60%;
+        text-align: right;
+        margin: 0px auto 0px auto;
+    }
+    #cardhoveranimate7 img{
+        width: 100px;
+
+    }
+    /* 7 */
+    /* 8 */
+    #cardhoveranimate8{
+        width: 60%;
+        text-align: right;
+        margin: 0px auto 0px auto;
+    }
+    #cardhoveranimate8 img{
+        width: 100px;
+        
+    }
+    /* 8 */
+    /* 9 */
+    #cardhoveranimate9{
+        width: 60%;
+        text-align: center;
+        margin: 0px auto 0px auto;
+    }
+    #cardhoveranimate9 img{
+        width: 100px;
+    }
+    /* 9 */
+    /* card */
+    .notepaper1 img{
+        position: absolute; 
+        top:22%;
+        left: 8%;
+    }
+    .notepaper2 img{
+        position: absolute; 
+        top:22%;
+        left:35%;
+    }
+    .notepaper3 img{
+        position: absolute; 
+        top:22%;
+        left: 60%;
+    }
+    .tape1 img{
+        position: absolute; 
+        top:15%;
+        left: 15%;
+    }
+    .tape2 img{
+        position: absolute; 
+        top:15%;
+        left: 40%;
+    }
+    .tape3 img{
+        position: absolute; 
+        top:15%;
+        left: 65%;
+    }
+}
+@media (min-width:769px){
+    .abiBackGround img {
+        margin-left: 13%;
+    }
+    #cardhoveranimate1 figcaption{
+        text-align: center;
+    }
+    #cardhoveranimate2 figcaption{
+        text-align: center;
+    }
+    #cardhoveranimate7 figcaption{
+        text-align: center;
+    }
+    #cardhoveranimate8 figcaption{
+        text-align: center;
+    }
+}
+@media (min-width:992px){
+    #card-group{
+        position: absolute; 
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}
+@media (min-width:1024px){
+    /* ability.html */
+    .abiBackGround span {
+        position: absolute;
+        top: 5%;
+        left: 10%;
+        font-size: 6rem;
+    }
+    .abiBackGround img {
+        margin-top: 20px;
+        margin-left: 12%;
+    }
+    .notepaper1 img{
+        position: absolute; 
+        top:22%;
+        left: 8%;
+        width: 400px;
+        height: 500px;
+    }
+    .notepaper2 img{
+        position: absolute; 
+        top:22%;
+        left:35%;
+        width: 400px;
+        height: 500px;
+    }
+    .notepaper3 img{
+        position: absolute; 
+        top:22%;
+        left: 60%;
+        width: 400px;
+        height: 500px;
+    }
+    .tape1 img{
+        position: absolute; 
+        top:16%;
+        left: 15%;
+    }
+    .tape2 img{
+        position: absolute; 
+        top:16%;
+        left: 40%;
+    }
+    .tape3 img{
+        position: absolute; 
+        top:16%;
+        left: 65%;
+    }
+}
+@media (min-width:1200px){
+
+}
